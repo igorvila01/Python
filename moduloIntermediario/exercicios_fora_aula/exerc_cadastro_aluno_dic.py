@@ -16,12 +16,15 @@ Crie um programa que:
 alunos = {}
 
 while True:
-    nome = input('Digite o nome do aluno ou sair: ')
+    
+    try:
+        nome = input('Digite o nome do aluno ou sair: ')
+        nota = float(input('Digite a nota do aluno: '))
+    except ValueError:
+        print('Voce digitou um valor invalido!')
 
     if nome == 'sair':      
        break
-
-    nota = float(input('Digite a nota do aluno: '))
 
     alunos[nome] = nota
 
