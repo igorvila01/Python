@@ -19,12 +19,12 @@ while True:
     
     try:
         nome = input('Digite o nome do aluno ou sair: ')
+        if nome == 'sair':      
+            break
         nota = float(input('Digite a nota do aluno: '))
     except ValueError:
         print('Voce digitou um valor invalido!')
-
-    if nome == 'sair':      
-       break
+        continue    
 
     alunos[nome] = nota
 
