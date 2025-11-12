@@ -21,18 +21,18 @@ perguntas = [
 ]
 
 cont_acerto = 0
-for sep_dicionario in perguntas:
-    print(sep_dicionario['pergunta'])
-    cont = 0
-    for i in sep_dicionario['opcoes']:
-        print(f'{cont}) {i}')
-        cont += 1
+for pergunta_atual in perguntas:
+    print(pergunta_atual['pergunta'])
+    indice_opcao = 0
+    for i in pergunta_atual['opcoes']:
+        print(f'{indice_opcao}) {i}')
+        indice_opcao += 1
     print()    
     resposta = input('Selecione sua resposta: ')
 
     try:
         resposta = int(resposta)
-        if sep_dicionario['opcoes'][resposta] == sep_dicionario['resposta']:
+        if pergunta_atual['opcoes'][resposta] == pergunta_atual['resposta']:
             print('Voce acertou!')
             cont_acerto += 1
         else: 
