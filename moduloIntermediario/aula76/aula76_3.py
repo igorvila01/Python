@@ -15,8 +15,8 @@ update - atualiza um dicionario com outro
 pessoa = {
     'nome': 'Igor',
     'sobrenome': 'Vila',
-    'idade': 30
-
+    'idade': 30,
+    'li' : [0,1,2]
 }
 
 # Caso exista a chave o setdefault nao vai fazer nada 
@@ -33,3 +33,16 @@ print(pessoa['idade'])
 
 # for chave, valor in pessoa.items():
 #     print(chave,valor)
+
+
+# para fazer uma copia raza para uma variavel devemos usar o copy
+# Lembrando que se possuir alguma chave mutavel, pode ser que tenhamos problemas futuramente, como uma 
+# lista, que ao alterar em uma, altera em ambos dicionarios, mas para copiar mutavel, podemos importar a 
+# biblioteca copy e usar o deepcopy
+# pessoa2 = copy.deepcopy(pessoa)
+pessoa2 = pessoa.copy()
+
+pessoa2['li'][1] = 333 
+pessoa['idade'] = 18
+print(pessoa)
+print(pessoa2)
