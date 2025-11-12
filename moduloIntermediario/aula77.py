@@ -19,3 +19,25 @@ perguntas = [
         'resposta': '5'
     }
 ]
+
+cont_acerto = 0
+for sep_dicionario in perguntas:
+    print(sep_dicionario['pergunta'])
+    cont = 0
+    for i in sep_dicionario['opcoes']:
+        print(f'{cont}) {i}')
+        cont += 1
+    print()    
+    resposta = input('Selecione sua resposta: ')
+
+    try:
+        resposta = int(resposta)
+        if sep_dicionario['opcoes'][resposta] == sep_dicionario['resposta']:
+            print('Voce acertou!')
+            cont_acerto += 1
+        else: 
+            print('Voce errou!')
+    except ValueError:
+        print('Resposta Invalida!')
+
+print(f'Voce acertou {cont_acerto} de {len(perguntas)} perguntas!')
