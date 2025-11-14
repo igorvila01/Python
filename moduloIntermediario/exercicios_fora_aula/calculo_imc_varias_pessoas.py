@@ -65,15 +65,13 @@ for i_pessoa in range(qtd_pessoas):
             classificacao = classificar_imc(imc)
             pessoa['classificacao'] = classificacao
 
-            pessoas.append(pessoa)
+            copia_pessoa = pessoa.copy()
+
+            pessoas.append(copia_pessoa)
             break
         except ValueError:
             print('❌Entrada Inválida!')
             continue
 
-print(f'Nome = {pessoas[i_pessoas]['nome']}, IMC: {pessoas[i_pessoas]['imc']}, Classificação: {pessoas[i_pessoas]['classificacao']}')
-
-
-        
-    
-    
+for i_pessoas in range(len(pessoas)):
+    print(f"Nome = {pessoas[i_pessoas]['nome']}, IMC: {pessoas[i_pessoas]['imc']}, Classificação: {pessoas[i_pessoas]['classificacao']}")
