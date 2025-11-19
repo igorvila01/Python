@@ -39,6 +39,10 @@ def classificar_imc(imc):
     else:
         return 'Obesidade Grau 3'
 
+def relatorio_final(listar):
+    print('📊 Relatorio final: ')
+    for i_pessoas in range(len(listar)):
+        print(f"Nome = {listar[i_pessoas]['nome']}, IMC: {listar[i_pessoas]['imc']:.2f}, Classificação: {listar[i_pessoas]['classificacao']}")       
 
 while True:
     try:
@@ -73,5 +77,4 @@ for i_pessoa in range(qtd_pessoas):
             print('❌Entrada Inválida!')
             continue
 
-for i_pessoas in range(len(pessoas)):
-    print(f"Nome = {pessoas[i_pessoas]['nome']}, IMC: {pessoas[i_pessoas]['imc']}, Classificação: {pessoas[i_pessoas]['classificacao']}")
+relatorio_final(pessoas)
