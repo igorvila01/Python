@@ -20,12 +20,18 @@ def cadastrar_produto(nome, preco, estoque, total):
                 'qtd_estoque' : round(estoque,3),
                 'valor_total' : round(total, 2)
             }
+    return produto
 
 def calcular_valor_total(preco, quantidade):
     preco = float(preco)
     quantidade = float(quantidade)
     total = preco*quantidade
     return total
+
+def exibir_relatorio(listar):
+    print('Produtos Cadastrados: ')
+    for i in range(len(listar)):
+        print(f'Produto: {listar[i]['nome']} | Preco Unitario: {listar[i]['preco_unitario']} | Estoque: {listar[i]['qtd_estoque']} | Valor Total: {listar[i]['valor_total']}')
 
 produtos = []
 while True:
@@ -52,4 +58,4 @@ for i in range(qtd_itens):
             print('❌Entrada Invalida! Digite novamente!')
             continue
 
-print(produtos)
+exibir_relatorio(produtos)
