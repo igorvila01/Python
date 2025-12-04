@@ -27,17 +27,23 @@ lista_de_listas_de_inteiros = [
 ]
 
 resultado_final = []
+
 for i in lista_de_listas_de_inteiros:
     # print(i)
-    numeros = []
-    for j in i:
+    numeros = []   
+    qtd_lista = len(i)
+    contar = 0
+    for j in i:           
         
         if j in numeros:
             resultado_final.append(j)
             break
-# Verificar esse if, esta errado 
-        if j == len(i) and j not in numeros:
-            resultado_final.append(-1)
+
+        if qtd_lista-1 == contar and j not in numeros:
+            resultado_final.append(-1) 
+            contar += 1     
+        
+        contar+=1
         
         numeros.append(j)
 
