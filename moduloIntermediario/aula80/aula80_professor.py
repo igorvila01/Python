@@ -26,47 +26,18 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
-#[-1,9,2,8,8,2,2,1,1,2,5,-1]
-
-# resultado_final = []
-
-# for i in lista_de_listas_de_inteiros:
-#     # print(i)
-#     numeros = []   
-#     qtd_lista = len(i)
-#     contar = 0
-#     for j in i:           
-        
-#         if j in numeros:
-#             resultado_final.append(j)
-#             break
-
-#         if qtd_lista-1 == contar and j not in numeros:
-#             resultado_final.append(-1) 
-#             contar += 1     
-        
-#         contar+=1
-        
-#         numeros.append(j)
-
-# print(resultado_final)
-
-def encontrar_primeiro_duplicado(lista):    
+def encontra_primeiro_duplicado(lista_de_inteiros):
+    numeros_checados = set()
     primeiro_duplicado = -1
-    numeros = set()
 
-    for i in lista:
-        if i in numeros:
-            primeiro_duplicado = i
+    for numero in lista_de_inteiros:
+        if numero in numeros_checados:
+            primeiro_duplicado = numero
             break
-        
-        numeros.add(i)
+
+        numeros_checados.add(numero)
     
-    return primeiro_duplicado  
+    return primeiro_duplicado
 
-resultado_final = []
-for i in lista_de_listas_de_inteiros:
-    resultado_final.append(encontrar_primeiro_duplicado(i))
-
-print(resultado_final)
-        
+for lista in lista_de_listas_de_inteiros:
+    print(lista, encontra_primeiro_duplicado(lista))
