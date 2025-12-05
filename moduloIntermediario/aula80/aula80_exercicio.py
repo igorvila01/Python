@@ -68,5 +68,5 @@ resultado_final = []
 for i in lista_de_listas_de_inteiros:
     resultado_final.append(encontrar_primeiro_duplicado(i))
 
-print(resultado_final)
+print(resultado_final) 
         
