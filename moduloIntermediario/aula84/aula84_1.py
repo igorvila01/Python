@@ -23,3 +23,4 @@ lista = [
     for numero in range(10)
     ] 
 print(lista)
+
