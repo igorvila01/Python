@@ -8,8 +8,13 @@ def multiplica(x, y):
 
 
 def criar_funcao(funcao, *args):
-    return funcao(*args)
+    def executa(*novo_args):
+        return funcao(*args,*novo_args)    
+    return executa
 
 
 soma_com_cinco = criar_funcao(soma, 5)
 multiplica_por_dez = criar_funcao(multiplica, 10)
+
+print(soma_com_cinco(10))
+print(multiplica_por_dez(5))
