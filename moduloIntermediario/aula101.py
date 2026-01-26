@@ -7,9 +7,9 @@ def multiplica(x, y):
     return x * y
 
 
-def criar_funcao(funcao, *args):
-    def executa(*novo_args):
-        return funcao(*args,*novo_args)    
+def criar_funcao(funcao, x):
+    def executa(y):
+        return funcao(x,y)    
     return executa
 
 
