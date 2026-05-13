@@ -1,0 +1,17 @@
+""[
+    {"name": "Joao", "lastName": "Santos", "age": 25},
+    {"name": "Maria", "lastName": "Joaquina"},
+    {"name": "Lucio", "lastName": "Flavio"}
+
+]""
+
+
+{
+    "name": "Lucio", 
+    "lastName": "Flavio",
+    "age": 25,
+    "addresses": [
+        {"line1": "Rua A"},
+        {"line2": "Rua B"}
+    ]
+}
